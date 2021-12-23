@@ -725,8 +725,7 @@ checksum = "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d"
 [[package]]
 name = "sssmc39"
 version = "0.0.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a0e1bdd80fb7a3e4074a058518ac4d0b824b44ab848901475da33e3c06ea0a49"
+source = "git+https://github.com/marcopolo/rust-sssmc39?rev=882fc8ef17962104aa6ef86fecf8400d07546f9e#882fc8ef17962104aa6ef86fecf8400d07546f9e"
 dependencies = [
  "bitvec",
  "digest",
