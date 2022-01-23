@@ -20,7 +20,8 @@ rand = "0.6"
 regex = "1.3.1"
 serde = { version = "1.0.101", features = [ "derive" ] }
 serde_json = "1.0.40"
-sssmc39 = { git = "https://github.com/marcopolo/rust-sssmc39", rev = "882fc8ef17962104aa6ef86fecf8400d07546f9e" }
+sssmc39 = { git = "https://github.com/marcopolo/rust-sssmc39", rev = "a3e9d53d295b249c0212d6f7ab9dc434c8210df2" }
+# sssmc39 = { path = "../rust-sssmc39"}
 structopt = "0.3.2"
 tiny-bip39 = "0.6.2"
 

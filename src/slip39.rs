@@ -1,9 +1,21 @@
+use std::fmt::Display;
+
 use serde::{Serialize, Serializer};
 use sssmc39::*;
 
 use crate::MasterSecret;
 
+#[derive(Debug)]
 pub struct Slip39(Vec<GroupShare>);
+
+impl Display for Slip39 {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {
+        for group in self.0.iter() {
+            writeln!(f, "{}", group)?;
+        }
+        Ok(())
+    }
+}
 
 impl Slip39 {
     pub fn new(

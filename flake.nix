@@ -55,7 +55,7 @@
             # If the project requires openssl, uncomment these
             # pkgs.pkg-config
             # pkgs.openssl
-          ];
+          ] ++ (if system == "aarch64-darwin" then (with pkgs.darwin.apple_sdk.frameworks; [ Security ]) else [ ]);
           # If the project requires openssl, uncomment this
           # PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
         };

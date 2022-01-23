@@ -115,7 +115,7 @@ impl SplitOptions {
 
 fn print_split(options: &SplitOptions, master_secret: &MasterSecret) -> Fallible<()> {
     let slip39 = options.split(&master_secret)?;
-    println!("{}", serde_json::to_string_pretty(&slip39)?);
+    println!("{}", &slip39);
     Ok(())
 }
 
