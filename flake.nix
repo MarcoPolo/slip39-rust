@@ -31,7 +31,7 @@
           version = "0.1.1";
           # target = "";
 
-          nativeBuildInputs = [ rustStable ] ++ (with pkgs.darwin.apple_sdk.frameworks; [ Security ]);
+          nativeBuildInputs = [ rustStable ] ++ (if system == "aarch64-darwin" then (with pkgs.darwin.apple_sdk.frameworks; [ Security ]) else [ ]);
 
           src = ./.;
 
